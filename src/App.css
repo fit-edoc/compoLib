@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: logo;
+    src: url("./fonts/xirod.regular.otf")format("woff2");
+}
+
+.mainhero{
+    background-color: #003c43;
+background-image: radial-gradient(at 10% 66%, #003c43 0%, transparent 60%), radial-gradient(at 89% 7%, #135d66 0%, transparent 50%), radial-gradient(at 15% 84%, #77b0aa 0%, transparent 40%), radial-gradient(at 2% 27%, #e3fef7 0%, transparent 30%);
+}
+
+.top{
+    border-radius: 0px 0px 96px 93px;
+-webkit-border-radius: 0px 0px 96px 93px;
+-moz-border-radius: 0px 0px 96px 93px;
+}
+
+.top1{
+    border-radius: 0px 0px 96px 93px;
+-webkit-border-radius: 0px 0px 96px 93px;
+-moz-border-radius: 0px 0px 96px 93px;
+}
