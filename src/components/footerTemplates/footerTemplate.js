@@ -3,7 +3,7 @@ export const footerTemplates
     1:({text ,color})=>{
         `import React, { useState } from "react";
 import { LinkIcon ,FacebookIcon,Instagram,TwitterIcon } from "lucide-react";
-import { ColorTab } from "../../components/CodeGenerator/ColorTab";
+
 
 export const Footer1 = () => {
 

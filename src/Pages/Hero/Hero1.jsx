@@ -18,7 +18,7 @@ export const Hero1 = () => {
             </div>
         </div>
         <div className='w-[50%] min-h-screen relative flex items-center justify-center'>
-            <div className='h-[70vh] w-[30vw] absolute bg-gradient-to-tr from-[#3a78c0] to-[#081938] rounded-blob'> 
+            <div className='h-[70vh] w-[30vw] absolute overflow-hidden bg-gradient-to-tr from-[#3a78c0] to-[#081938] rounded-blob'> 
                 <img src={tt} className='h-full w-full object-contain' alt="" />
             </div>
         </div>

@@ -4,12 +4,14 @@ import { heroTemplates } from '../../components/heroTemplates/heroTemplates.js';
 import { Hero1 } from '../Hero/Hero1.jsx';
 import { Hero2 } from '../Hero/Hero2.jsx';
 import { Hero3 } from '../Hero/Hero3.jsx';
+import { Elegant } from '../landingpages/Elegant.jsx';
 
 
 const heroPreviewComponents = {
   1: <Hero1  />,
   2: <Hero2 />,
   3: <Hero3 />,
+  4:<Elegant/>
 };
 
 const HeroPreview = () => {

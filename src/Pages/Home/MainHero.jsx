@@ -16,15 +16,15 @@ const MainHero = () => {
         animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
         transition={{ duration: 2, ease: "easeInOut" }}
       /></div>
-        <motion.div className="min-h-[20px] w-[200px]  absolute flex justify-center items-center  overflow-hidden left-[45%] translate-x-[-50%] translate-y-[-50%] md:h-[18vh] md:w-[40vw]"
+        <motion.div className="min-h-[20px] w-[200px]  absolute flex justify-center items-center  overflow-hidden left-[45%] translate-x-[-50%] translate-y-[-50%] md:h-[18vh] md:w-[45vw]"
         initial={{top:"120%" ,filter:"blur(50px)"}} animate={{top:"94%",filter:"blur(0px)"}}   transition={{
           type: "spring",
           stiffness: 200,   // speed / tension
           damping: 10   ,
-              // resistance to bounce
+              
         }}>
-          <motion.h1 className="text-[20px]  font-logo mx-auto text-black  cursor-pointer md:text-[4vw]" initial="initial" whileHover="hovered">COMPO<motion.span variants={{initial:{y:0},hovered:{y:"-100%"}}} transition={{duration:0.3}} className="absolute text-blue-400">LIB</motion.span>
-          <motion.span variants={{initial:{y:"100%"},hovered:{y:0}}} transition={{duration:0.3}} className="absolute text-white">LIB</motion.span></motion.h1>
+          <motion.h1 className="text-[20px]  font-logo mx-auto text-white  cursor-pointer md:text-[4vw]" initial="initial" whileHover="hovered">Resuable<motion.span variants={{initial:{y:0},hovered:{y:"-100%"}}} transition={{duration:0.3}} className="absolute text-blue-400">UI</motion.span>
+          <motion.span variants={{initial:{y:"100%"},hovered:{y:0}}} transition={{duration:0.3}} className="absolute text-black">UI</motion.span></motion.h1>
         </motion.div>
       </div>
       <div className="h-[50vh]  w-screen overflow-hidden relative">

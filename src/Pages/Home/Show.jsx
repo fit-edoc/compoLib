@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { HeroTab } from "./HeroTab";
 import { FooterTab } from "../Home/FooterTab";
+import { AccordianTab } from "./AccordianTab";
 
 const tabData = {
   Hero: {
@@ -11,6 +12,10 @@ const tabData = {
     label: "Footer",
     component: <FooterTab />,
   },
+  Accordian:{
+    label:"Accordian",
+    component:<AccordianTab/>
+  }
 };
 
 export const Show = () => {

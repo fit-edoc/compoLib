@@ -9,6 +9,7 @@ import { Home } from './Pages/Home/Home'
 import HeroPreview from './Pages/Home/HeroPreview'
 import FooterPreview from './Pages/Home/FooterPreview'
 import { NotFound } from './Pages/Home/NotFound'
+import AccordianPreview from './Pages/Home/AccordianPreview'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
  <Route path='/'  element={ <Home/>}/>
  <Route  path="/hero/:id" element={<HeroPreview/>}/>
  <Route  path='/footer/:id' element={<FooterPreview/>}/>
+  <Route  path='/accordian/:id' element={<AccordianPreview/>}/>
  <Route path='*' element={<NotFound/>}/>
  
 
