@@ -3,10 +3,9 @@ import { Nav } from './Nav'
 import MainHero  from './MainHero'
 
 import { Show } from './Show'
-import { Elegant } from '../landingpages/Elegant'
-import { Classy } from '../landingpages/Classy'
-import Accordian1 from '../Accordian/Accordian1'
-import Accordian2 from '../Accordian/Accordian2'
+import Carosel1 from '../Carousel/Carosel1'
+import Carousel2 from '../Carousel/Carousel2'
+
 
 
 
@@ -17,8 +16,9 @@ export const Home = () => {
         <div> <Nav/></div>
         <div><MainHero/></div>
        <div> <Show/></div>
-       <Accordian1/>
-       <Accordian2/>
+       <Carousel2/>
+       <Carosel1/>
+      
     </div>
   )
 }

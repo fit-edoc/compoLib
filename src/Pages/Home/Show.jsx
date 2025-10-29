@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { HeroTab } from "./HeroTab";
 import { FooterTab } from "../Home/FooterTab";
 import { AccordianTab } from "./AccordianTab";
+import { CarouselTab } from "./CarouselTab";
 
 const tabData = {
   Hero: {
@@ -15,6 +16,10 @@ const tabData = {
   Accordian:{
     label:"Accordian",
     component:<AccordianTab/>
+  },
+  Carousel:{
+    label:"Carousel",
+    component:<CarouselTab/>
   }
 };
 

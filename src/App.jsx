@@ -10,6 +10,7 @@ import HeroPreview from './Pages/Home/HeroPreview'
 import FooterPreview from './Pages/Home/FooterPreview'
 import { NotFound } from './Pages/Home/NotFound'
 import AccordianPreview from './Pages/Home/AccordianPreview'
+import CarouselPreview from './Pages/Home/CarouselPreview'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
  <Route  path="/hero/:id" element={<HeroPreview/>}/>
  <Route  path='/footer/:id' element={<FooterPreview/>}/>
   <Route  path='/accordian/:id' element={<AccordianPreview/>}/>
+  <Route path='/carousel/:id' element={<CarouselPreview/>}/>
  <Route path='*' element={<NotFound/>}/>
  
 
