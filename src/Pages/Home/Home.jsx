@@ -3,8 +3,7 @@ import { Nav } from './Nav'
 import MainHero  from './MainHero'
 
 import { Show } from './Show'
-import Carosel1 from '../Carousel/Carosel1'
-import Carousel2 from '../Carousel/Carousel2'
+
 
 
 
@@ -16,8 +15,7 @@ export const Home = () => {
         <div> <Nav/></div>
         <div><MainHero/></div>
        <div> <Show/></div>
-       <Carousel2/>
-       <Carosel1/>
+      
       
     </div>
   )
