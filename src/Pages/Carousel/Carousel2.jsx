@@ -45,7 +45,7 @@ const Carousel2 = () => {
 
   return (
     <div className="h-[60vh] w-screen flex flex-col items-center justify-center">
-      {/* Image Carousel */}
+  
       <div className="relative w-[80%] h-full overflow-hidden rounded-2xl shadow-lg">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.img
@@ -65,7 +65,7 @@ const Carousel2 = () => {
           />
         </AnimatePresence>
 
-        {/* Prev/Next Buttons */}
+     
         <div className="absolute inset-0 flex justify-between items-center px-3">
           <button
             onClick={prevClick}
@@ -88,7 +88,7 @@ const Carousel2 = () => {
             onClick={() => handleDotClick(index)}
             className={`h-3 w-3 rounded-full transition-all duration-300 ${
               index === activeIndex
-                ? "bg-blue-600 scale-110"
+                ? "bg-blue-600 scale-110 w-[20px]"
                 : "bg-gray-400 hover:bg-gray-500"
             }`}
           ></button>
