@@ -54,7 +54,7 @@ const toggleAccordian = (id)=>{
 }
 
   return (
-    <div className='h-[50vh] w-[50vw]  mx-auto px-2 bg-red-700'>
+    <div className='h-[50vh] w-[50vw]  mx-auto px-2'>
 
 
       {accordionData.map((item,idx)=>(
@@ -64,7 +64,7 @@ const toggleAccordian = (id)=>{
     <div className="h-[50px] w-full   bg-blue-50 px-2 flex  items-center justify-between" onClick={()=>toggleAccordian(item.id)}> <li>{item.id} {item.question}</li> <motion.i className=' text-white rounded-full' animate={{rotate:click === item.id ? 360:0 ,backgroundColor:click===item.id? "blue":"black"}}>{click === item.id ? <MinusCircle/> :<PlusCircle/>}</motion.i> </div>
 {click === item.id &&   <motion.div
   layout
-  className="w-full bg-gray-100 overflow-hidden rounded-b-md"
+  className="w-full bg-gray-100 shadow-sm shadow-black overflow-hidden rounded-b-md"
   
   animate={{ height: click === item.id ? "10x" : "0px" }}
   transition={{ duration: 0.4, ease: "easeInOut" }}

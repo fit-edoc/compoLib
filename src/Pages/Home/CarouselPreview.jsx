@@ -1,9 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-import { accordianTemplates } from '../../components/accordianTemplates/accordianTemplates.js';
+
 import Carousel1 from '../Carousel/Carosel1.jsx';
 import Carousel2 from '../Carousel/Carousel2.jsx';
+import { carouselTemplate } from '../../components/carouselTemplate/carouselTemplate.js';
+carouselTemplate
 
 const previewComponents = {
   1: <Carousel1 />,
@@ -15,7 +17,7 @@ const CarouselPreview = () => {
   const Component = previewComponents[id];
 
   const handleDownload = () => {
-    const generateCode = accordianTemplates[id];
+    const generateCode = carouselTemplate[id];
     if (!generateCode) {
       alert('Template not found!');
       return;
@@ -31,14 +33,14 @@ const CarouselPreview = () => {
     // Create a hidden download link
     const link = document.createElement('a');
     link.href = url;
-    link.download = `Accordian${id}.jsx`;
+    link.download = `Carousel${id}.jsx`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   if (!Component)
-    return <div className="p-8 text-red-500">Accordion Not Found</div>;
+    return <div className="p-8 text-red-500">Carousel Not Found</div>;
 
   return (
     <div className="mainhero min-h-screen p-8 space-y-10">

@@ -1,55 +1,66 @@
 import React from "react";
 import { motion } from "framer-motion";
-import img1 from '../../assets/images/ptt.png'
+import GalaxyBackground from "../../components/GalaxyBackground";
+import LightStripEffect from "../../components/LightStripEffect";
+import { ArrowRight, Zap } from "lucide-react";
 
 const MainHero = () => {
-
-
   return (
-    <div className="mainhero min-h-screen w-screen  relative ">
-      <div className="h-[50vh]  w-screen relative overflow-hidden  ">
-      <div className="h-[40vh] w-[50vw] absolute  left-[50%] top-16"> <motion.img
-        src={img1}
-        alt="Brush Reveal"
-        className="md:w-full md:h-full  object-contain"
-        initial={{ clipPath: 'inset(100% 0% 0% 0%)' }}
-        animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
-        transition={{ duration: 2, ease: "easeInOut" }}
-      /></div>
-        <motion.div className="min-h-[20px] w-[200px]  absolute flex justify-center items-center  overflow-hidden left-[45%] translate-x-[-50%] translate-y-[-50%] md:h-[18vh] md:w-[45vw]"
-        initial={{top:"120%" ,filter:"blur(50px)"}} animate={{top:"94%",filter:"blur(0px)"}}   transition={{
-          type: "spring",
-          stiffness: 200,   // speed / tension
-          damping: 10   ,
-              
-        }}>
-          <motion.h1 className="text-[20px]  font-logo mx-auto text-white  cursor-pointer md:text-[4vw]" initial="initial" whileHover="hovered">Resuable<motion.span variants={{initial:{y:0},hovered:{y:"-100%"}}} transition={{duration:0.3}} className="absolute text-blue-400">UI</motion.span>
-          <motion.span variants={{initial:{y:"100%"},hovered:{y:0}}} transition={{duration:0.3}} className="absolute text-black">UI</motion.span></motion.h1>
+    <div className="relative w-full min-h-screen bg-black overflow-hidden flex flex-col items-center justify-center text-white">
+      {/* Background Effects */}
+      <GalaxyBackground />
+      <LightStripEffect />
+
+      {/* Content Overlay */}
+      <div className="relative z-20 container mx-auto px-4 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="mb-6 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm text-blue-300"
+        >
+          <Zap size={16} className="fill-blue-300" />
+          <span>Next-Gen Performance</span>
+        </motion.div>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-blue-400"
+        >
+          Architecting the <br />
+          <span className="text-green-400">Future of Digital</span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10"
+        >
+          Experience the power of seamless integration and scalable solutions.
+          We build the infrastructure that powers tomorrow's enterprises.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
+          <button className="px-8 py-4 rounded-[50px] bg-gradient-to-br from-green-400 to-neutral-950 hover:bg-blue-500 text-white font-semibold transition-all flex items-center justify-center gap-2 group">
+            See Components
+            <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+          </button>
+          <button className="px-8 py-3  rounded-[50px] bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold backdrop-blur-sm transition-all">
+            View Documentation
+          </button>
         </motion.div>
       </div>
-      <div className="h-[50vh]  w-screen overflow-hidden relative">
-        <motion.h1
-          className="absolute -translate-x-1/2 -translate-y-1/2 text-[2vw] left-1/2 top-[-25%] overflow-hidden font-extralight capitalize   px-4 text-white"
-          initial={{ opacity: 0, top: "-25%",filter:"blur(90px)" }}
-          animate={{ opacity: 1, top: "9%",filter:"blur(0px)" ,backgroundColor:"#3ac3ea", color:"black" ,borderRadius:"30px" }}
-          transition={{
-            type: "spring",
-            stiffness: 100,   
-            damping: 10,   
-            delay:1,    
-          }}
-        >
-          <motion.span  >Your</motion.span> <span>components,</span> <span> your way</span>
-        </motion.h1>
-        <div className="h-[40vh] w-[50vw]"> <motion.img
-        src={img1}
-        alt="Brush Reveal"
-        className="w-full h-full object-contain"
-        initial={{ clipPath: 'inset(0% 0% 100% 0%)' }}
-        animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
-        transition={{ duration: 2, ease: "easeInOut" }}
-      /></div>
-      </div>
+
+      {/* Decorative Gradient Glow */}
+      <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-blue-900/20 to-transparent pointer-events-none" />
     </div>
   );
 };

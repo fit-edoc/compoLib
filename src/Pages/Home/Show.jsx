@@ -27,9 +27,10 @@ export const Show = () => {
   const [activeTab, setActiveTab] = useState("Hero"); // Match the tab key exactly (case-sensitive)
 
   return (
-    <div className="min-h-screen w-screen bg-black">
+    <div className="min-h-screen w-screen">
       {/* Top Navigation */}
-      <div className="h-[70px] w-full bg-gradient-to-bl from-[#234528] to-[#fff2] flex gap-3 justify-center items-center px-2">
+      <div className="h-[70px] w-full  bg-gradient-to-bl from-[#234528] to-[#fff2] flex gap-3 justify-center items-center px-2">
+        
         {Object.entries(tabData).map(([key, { label }]) => (
           <button
             key={key}
