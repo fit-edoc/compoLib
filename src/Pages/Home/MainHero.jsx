@@ -13,24 +13,16 @@ const MainHero = () => {
 
       {/* Content Overlay */}
       <div className="relative z-20 container mx-auto px-4 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-6 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm text-blue-300"
-        >
-          <Zap size={16} className="fill-blue-300" />
-          <span>Next-Gen Performance</span>
-        </motion.div>
+
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-blue-400"
+          className="text-5xl md:text-[6vw] font-hero tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-blue-400"
         >
           Architecting the <br />
-          <span className="text-green-400">Future of Digital</span>
+          <span className="bg-clip-text text-transparent bg-gradient-to-t from-5% from-[#160079] to-55% to-white">Future of Digital</span>
         </motion.h1>
 
         <motion.p
@@ -49,13 +41,11 @@ const MainHero = () => {
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <button className="px-8 py-4 rounded-[50px] bg-gradient-to-br from-green-400 to-neutral-950 hover:bg-blue-500 text-white font-semibold transition-all flex items-center justify-center gap-2 group">
+          <button className="px-8 py-4 rounded-[50px] bg-gradient-to-br from-[#000325] to-[#161938] border border-white hover:bg-blue-500 text-white font-semibold transition-all flex items-center justify-center gap-2 group">
             See Components
             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
           </button>
-          <button className="px-8 py-3  rounded-[50px] bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold backdrop-blur-sm transition-all">
-            View Documentation
-          </button>
+        
         </motion.div>
       </div>
 

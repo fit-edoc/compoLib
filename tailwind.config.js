@@ -12,7 +12,8 @@ export default {
         
       },
       fontFamily:{
-        logo:["logo"]
+        logo:["logo"],
+        hero:["hero"]
       }
     },
   },
